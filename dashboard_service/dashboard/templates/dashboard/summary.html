@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DCCS Dashboard</title>
+</head>
+<body>
+    <h1>DCCS Dashboard Summary</h1>
+    <p>Total Drones: {{ drone_count }}</p>
+    <p>Active Commands: {{ active_commands }}</p>
+    <h2>Drones</h2>
+    <ul>
+        {% for drone in drones %}
+            <li>{{ drone.identifier }} ({{ drone.model }})</li>
+        {% endfor %}
+    </ul>
+    <h2>Commands</h2>
+    <ul>
+        {% for command in commands %}
+            <li>{{ command.command_type }} for {{ command.drone_identifier }} ({{ command.status }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
