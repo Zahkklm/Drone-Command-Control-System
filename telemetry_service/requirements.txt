@@ -1,0 +1,8 @@
+Django>=5.0
+djangorestframework
+channels
+channels-redis
+psycopg2-binary
+celery
+redis
+graphene-django
